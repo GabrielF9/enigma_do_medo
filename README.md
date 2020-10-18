@@ -1,6 +1,6 @@
 # Ordem Paranormal: Enigma do Medo
 
-Esse é um site para visualização dos dados da campanha de crowdfounding do https://www.catarse.me/ordem
+Esse é um site para visualização dos dados da campanha de crowdfunding do https://www.catarse.me/ordem
 
 ---
 
