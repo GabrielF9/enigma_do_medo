@@ -1,9 +1,164 @@
-body {
-  background-color: red;
+/* Importação de Fontes */
+
+@font-face {
+  font-family: 'Candara Bold';
+  src: url(assets/CANDARAB.TTF)
 }
 
-#barrinha {
-  background: linear-gradient(aqua, blue, black);
+@font-face {
+  font-family: 'Candara';
+  src: url(assets/CANDARA.TTF)
+}
+
+@font-face {
+  font-family: 'Century';
+  src: url(assets/TT1182M_.TTF)
+}
+
+/* Global Defs */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-image: url(assets/background.webp);
+  background-repeat: no-repeat;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 91px 30px;
+}
+
+/* Title */
+
+#title {
+  font-family: 'Century';
+  font-size: 20px;
+  line-height: 0.2;
+}
+
+#subtitle {
+  font-family: 'Candara';
+  font-size: 35px;
+}
+
+/* Progress Bar */
+
+#progressbar-container {
+  height: 40px;
+  border-radius: 10px;
+}
+
+#progressbar-conf {
+  background: linear-gradient(170deg, #b04b55, #642531, #000);
   width: 0%;
   transition: 0.5s;
+}
+
+#progressbar-wait {
+  background: linear-gradient(170deg, #797d9d, #153955, #000);
+  width: 0%;
+  transition: 0.5s;
+}
+
+#marks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 6px;
+}
+
+#marks {
+  background-image: url(assets/metas.png);
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 193px;
+}
+
+/* Values */
+
+#container-values {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.container-value {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.name-value {
+  font-family: 'Century';
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.container-money {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-family: 'Candara Bold';
+  font-size: 22px;
+  width: 175px;
+  padding: 3.5px 0;
+  padding-bottom: 5px;
+}
+
+#pledged {
+  background: linear-gradient(#b04b55, #642531, #000);
+}
+
+#waiting {
+  background: linear-gradient(#797d9d, #153955, #000);
+}
+
+#total {
+  background-color: rgba(255, 255, 255, .35);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.total-texts {
+  font-family: 'Candara Bold';
+}
+
+#total-title {
+  width: 100vw;
+  text-align: left;
+  font-size: 25px;
+  padding-left: 23px;
+}
+
+#total-value {
+  font-size: 40px;
+}
+
+/* Feito Por */
+
+#info, #by {
+  font-family: 'Candara';
+  font-size: 12px;
+}
+
+#by {
+  text-align: center;
 }

@@ -15,12 +15,10 @@ window.addEventListener('load', () => {
   axios.get('https://api.catarse.me/project_details?project_id=eq.122021')
     .then((projectRes) => {
       let data = projectRes.data[0];
-      let name = data.name;
       let pledged = data.pledged;
 
-      document.getElementById('name').innerHTML = name;
-      document.getElementById('barrinha').style.width = `${calcPercent(pledged)}%`;
-      document.getElementById('pledged').innerHTML = `Total Arrecadado (Confirmado): ${formatMoney(pledged)}`;
+      document.getElementById('progressbar-conf').style.width = `${calcPercent(pledged)}%`;
+      document.getElementById('pledged').innerHTML = `${formatMoney(pledged)}`;
 
       axios.get('https://api.catarse.me/reward_details?project_id=eq.122021')
         .then((detailsRes) => {
@@ -36,8 +34,8 @@ window.addEventListener('load', () => {
 
           let total = pledged + waiting;
 
-          document.getElementById('waiting').innerHTML = `Total Arrecadado (Em Confirmação): ${formatMoney(waiting)}`;
-          document.getElementById('total').innerHTML = `Total Esperado (Confirmado + Em Confirmação): ${formatMoney(total)}`;
+          document.getElementById('waiting').innerHTML = `${formatMoney(waiting)}`;
+          document.getElementById('total-value').innerHTML = `${formatMoney(total)}`;
         })
         .catch((error) => {
           console.log(error);

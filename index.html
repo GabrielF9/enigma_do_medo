@@ -7,23 +7,46 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="index.css" />
-  <title>Enigma do Medo - Detalhes do CrowndFounding</title>
+  <title>Enigma do Medo - Crowdfunding</title>
 </head>
 
 <body>
-  <div class="d-flex flex-column justify-content-center align-items-center">
-    <div id="name"></div>
+  <div id="content">
+    <!-- Title -->
+    <div id="title">ORDEM PARANORMAL</div>
+    <div id="subtitle">ENIGMA DO MEDO</div>
 
-    <div class="d-block w-100 container bg-white" style="border-radius: 5px; padding: 3px;">
-      <div class="progress bg-white">
-        <div class="progress-bar" id="barrinha" role="progressbar"></div>
+    <!-- Progress Bar -->
+    <div class="d-block" style="width: 293px !important;">
+      <div class="w-100" id="marks-container">
+        <div id="marks"></div>
+      </div>
+      <div class="progress bg-white" id="progressbar-container" style="margin-right: 12px;">
+        <div class="progress-bar" id="progressbar-conf" role="progressbar"></div>
+        <div class="progress-bar" id="progressbar-wait" role="progressbar" style="width: 10%;"></div>
       </div>
     </div>
 
-    <div id="total"></div>
-    <div id="pledged"></div>
-    <div id="waiting"></div>
+    <!-- Container Values -->
+    <div id="container-values">
+      <div class="container-value">
+        <span class="name-value">Confirmado:</span>
+        <div class="container-money" id="pledged"></div>
+      </div>
+      <div class="container-value">
+        <span class="name-value">Pendente:</span>
+        <div class="container-money" id="waiting"></div>
+      </div>
+    </div>
+
+    <div id="total">
+      <div class="total-texts" id="total-title">Somatório:</div>
+      <div class="total-texts" id="total-value"></div>
+    </div>
+
+    <div id="info">Obs: Valores com base no valor de apoio mínimo</div>
   </div>
+  <div id="by">Programação: @gabrielf_dev | Design: @taisa_semh</div>
 
   <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
