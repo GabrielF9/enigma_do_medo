@@ -143,9 +143,8 @@ body {
 
 #total-title {
   width: 100vw;
-  text-align: left;
+  text-align: center;
   font-size: 25px;
-  padding-left: 23px;
 }
 
 #total-value {
