@@ -1,0 +1,9 @@
+body {
+  background-color: red;
+}
+
+#barrinha {
+  background: linear-gradient(aqua, blue, black);
+  width: 0%;
+  transition: 0.5s;
+}
