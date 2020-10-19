@@ -2,11 +2,11 @@ const META = 1200000;
 
 window.addEventListener('load', () => {
 
-  setUpHTMLWithValuesAsync();
+  loadInfosAndChangeHTML();
 
 });
 
-async function setUpHTMLWithValuesAsync() {
+async function loadInfosAndChangeHTML() {
 
   let pledged = await getPledgedValueAsync();
   updatePledgedHTMLVaule(pledged);
