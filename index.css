@@ -32,9 +32,10 @@ body {
 #content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin: 91px 30px;
+  padding-top: 9vh;
+  height: 95vh;
 }
 
 /* Title */
@@ -160,4 +161,21 @@ body {
 
 #by {
   text-align: center;
+  height: 5vh;
+}
+
+#loading {
+  background-image: url(assets/background.webp);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+#loading .spin{
+  padding-top: 8vh;
 }
