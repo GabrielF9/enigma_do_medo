@@ -4,62 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css" />
   <title>Enigma do Medo - Crowdfunding</title>
 </head>
 
 <body>
-  <div id="content">
-    <!-- Title -->
-    <div id="title">ORDEM PARANORMAL</div>
-    <div id="subtitle">ENIGMA DO MEDO</div>
-
-    <!-- Progress Bar -->
-    <div class="d-block" style="width: 293px !important;">
-      <div class="w-100" id="marks-container">
-        <div id="marks"></div>
-      </div>
-      <div class="progress bg-white" id="progressbar-container" style="margin-right: 12px;">
-        <div class="progress-bar" id="progressbar-conf" role="progressbar"></div>
-        <div class="progress-bar" id="progressbar-wait" role="progressbar" style="width: 10%;"></div>
+  <main>
+    <div id="loading">
+      <div class="spin">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
     </div>
+    <div id="content">
+      <!-- Title -->
+      <div id="title">ORDEM PARANORMAL</div>
+      <div id="subtitle">ENIGMA DO MEDO</div>
 
-    <!-- Container Values -->
-    <div id="container-values">
-      <div class="container-value">
-        <span class="name-value">Confirmado:</span>
-        <div class="container-money" id="pledged"></div>
+      <!-- Progress Bar -->
+      <div class="d-block" style="width: 293px !important;">
+        <div class="w-100" id="marks-container">
+          <div id="marks"></div>
+        </div>
+        <div class="progress bg-white" id="progressbar-container" style="margin-right: 12px;">
+          <div class="progress-bar" id="progressbar-conf" role="progressbar"></div>
+          <div class="progress-bar" id="progressbar-wait" role="progressbar" style="width: 10%;"></div>
+        </div>
       </div>
-      <div class="container-value">
-        <span class="name-value">Pendente:</span>
-        <div class="container-money" id="waiting"></div>
+
+      <!-- Container Values -->
+      <div id="container-values">
+        <div class="container-value">
+          <span class="name-value">Confirmado:</span>
+          <div class="container-money" id="pledged"></div>
+        </div>
+        <div class="container-value">
+          <span class="name-value">Pendente:</span>
+          <div class="container-money" id="waiting"></div>
+        </div>
+      </div>
+
+      <div id="total">
+        <div class="total-texts" id="total-title">Somatório:</div>
+        <div class="total-texts" id="total-value"></div>
+      </div>
+
+      <div id="info">Obs: Valores com base no valor de apoio mínimo</div>
+      <div id="info">Se ainda não apoiou, <a href="https://www.catarse.me/ordem" target="_blank">clica aqui</a>
       </div>
     </div>
-
-    <div id="total">
-      <div class="total-texts" id="total-title">Somatório:</div>
-      <div class="total-texts" id="total-value"></div>
+  </main>
+  <footer>
+    <div id="by">
+      Programação: <a href="https://twitter.com/gabrielf_dev" target="_blank">@gabrielf_dev</a> | Design: <a
+        href="https://twitter.com/taisa_semh" target="_blank">@taisa_semh</a>
     </div>
-
-    <div id="info">Obs: Valores com base no valor de apoio mínimo</div>
-    <div id="info">Se ainda não apoiou, <a href="https://www.catarse.me/ordem" target="_blank">clica aqui</a></div>
-  </div>
-  <div id="by">Programação: <a href="https://twitter.com/gabrielf_dev" target="_blank">@gabrielf_dev</a> | Design: <a
-      href="https://twitter.com/taisa_semh" target="_blank">@taisa_semh</a></div>
+  </footer>
 
   <!-- Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
   <!-- Axios -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
