@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
 
           let total = pledged + waiting;
 
-          document.getElementById('progressbar-wait').style.width = `${(waiting + pledged) >= META ? calcPercent(META - pledged) : calcPercent(waiting)}%`;
+          document.getElementById('progressbar-wait').style.width = pledged >= META ? '0%' : `${(waiting + pledged) >= META ? calcPercent(META - pledged) : calcPercent(waiting)}%`;
           document.getElementById('waiting').innerHTML = `${formatMoney(waiting)}`;
           document.getElementById('total-value').innerHTML = `${formatMoney(total)}`;
         })
